@@ -5,12 +5,22 @@
 
     End Sub
 
-    Private Sub LoadButton_Click(sender As Object, e As EventArgs) Handles LoadButton.Click
-        ' Load the embedded image from resources
-        Dim embeddedImage As Image = My.Resources.logo
+    Private Sub Loadbutton_Click(sender As Object, e As EventArgs) Handles LoadButton.Click
+        ' Create an instance of OpenFileDialog
+        Dim openFileDialog1 As New OpenFileDialog()
 
-        ' Display the image in PictureBox1
-        PictureBox1.Image = embeddedImage
+        ' Set properties of OpenFileDialog
+        openFileDialog1.Title = "Select an Image"
+        openFileDialog1.Filter = "Image Files|*.bmp;*.jpg;*.jpeg;*.png;*.gif"
+
+        ' Show the file dialog and check if the user clicked OK
+        If openFileDialog1.ShowDialog() = DialogResult.OK Then
+            ' Get the selected file path
+            Dim selectedImagePath As String = openFileDialog1.FileName
+
+            ' Load the image into PictureBox1
+            PictureBox1.Image = Image.FromFile(selectedImagePath)
+        End If
     End Sub
 
     Private Sub RadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonRed.CheckedChanged, RadioButtonGreen.CheckedChanged, RadioButtonBlue.CheckedChanged
@@ -56,7 +66,7 @@
             fontFamily = "Garamond"
         ElseIf RadioButtonMagneto.Checked Then
             fontFamily = "Magneto"
-        ElseIf RadiobuttonTahoma.Checked Then
+        ElseIf RadioButtonTahoma.Checked Then
             fontFamily = "Tahoma"
         End If
 
