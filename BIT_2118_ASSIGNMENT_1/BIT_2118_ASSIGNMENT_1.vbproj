@@ -9,11 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="logo.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="logo.png" />
+    <Compile Remove="Resources\**" />
+    <EmbeddedResource Remove="Resources\**" />
+    <None Remove="Resources\**" />
   </ItemGroup>
 
   <ItemGroup>

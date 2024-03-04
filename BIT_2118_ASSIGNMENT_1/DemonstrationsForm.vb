@@ -58,21 +58,14 @@
         TextBox1.Font = New Font(TextBox1.Font, fontStyle)
     End Sub
     Private Sub RadioButtonFont_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonGaramond.CheckedChanged, RadioButtonMagneto.CheckedChanged, RadioButtonTahoma.CheckedChanged
-        ' Create a variable to hold the font family
-        Dim fontFamily As String = "Arial" ' Default font family
-
-        ' Check which radio button is checked and update the font family
+        ' Apply the updated font family to the text box directly inside the conditions
         If RadioButtonGaramond.Checked Then
-            fontFamily = "Garamond"
+            TextBox1.Font = New Font("Garamond", TextBox1.Font.Size, TextBox1.Font.Style)
         ElseIf RadioButtonMagneto.Checked Then
-            fontFamily = "Magneto"
+            TextBox1.Font = New Font("Magneto", TextBox1.Font.Size, TextBox1.Font.Style)
         ElseIf RadioButtonTahoma.Checked Then
-            fontFamily = "Tahoma"
+            TextBox1.Font = New Font("Tahoma", TextBox1.Font.Size, TextBox1.Font.Style)
         End If
-
-        'Apply the updated font family to the text box
-        TextBox1.Font = New Font(fontFamily, TextBox1.Font.Size, TextBox1.Font.Style)
-
     End Sub
 End Class
 
