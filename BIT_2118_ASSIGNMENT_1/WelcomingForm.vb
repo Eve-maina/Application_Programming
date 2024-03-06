@@ -12,8 +12,18 @@
         ' Maximize the form
         Me.WindowState = FormWindowState.Maximized
 
-        ' Change the background color to red
-        Me.BackColor = Color.Red
+
+    End Sub
+
+    Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+        If Me.WindowState = FormWindowState.Maximized Then
+            ' Change the background color to red
+            Me.BackColor = Color.Red
+
+        Else
+            Me.BackColor = SystemColors.Control
+
+        End If
     End Sub
 
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click

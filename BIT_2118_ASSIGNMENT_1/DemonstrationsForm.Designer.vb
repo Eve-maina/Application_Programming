@@ -29,18 +29,18 @@ Partial Class DemonstrationsForm
         TextBox1 = New TextBox()
         GroupBox2 = New GroupBox()
         GroupBox7 = New GroupBox()
-        RadioButtonTahoma = New RadioButton()
+        RadioButton3 = New RadioButton()
         GroupBox6 = New GroupBox()
-        RadioButtonMagneto = New RadioButton()
+        RadioButton2 = New RadioButton()
         GroupBox5 = New GroupBox()
-        RadioButtonGaramond = New RadioButton()
+        RadioButton1 = New RadioButton()
+        RadioButtonBlue = New RadioButton()
         GroupBox3 = New GroupBox()
         CheckBoxBoldItalic = New CheckBox()
         CheckBoxBold = New CheckBox()
         CheckBoxItalic = New CheckBox()
         GroupBox4 = New GroupBox()
         RadioButtonRed = New RadioButton()
-        RadioButtonBlue = New RadioButton()
         RadioButtonGreen = New RadioButton()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
@@ -110,63 +110,75 @@ Partial Class DemonstrationsForm
         ' 
         ' GroupBox7
         ' 
-        GroupBox7.Controls.Add(RadioButtonTahoma)
+        GroupBox7.Controls.Add(RadioButton3)
         GroupBox7.Location = New Point(296, 22)
         GroupBox7.Name = "GroupBox7"
         GroupBox7.Size = New Size(125, 38)
         GroupBox7.TabIndex = 2
         GroupBox7.TabStop = False
         ' 
-        ' RadioButtonTahoma
+        ' RadioButton3
         ' 
-        RadioButtonTahoma.AutoSize = True
-        RadioButtonTahoma.Location = New Point(6, 13)
-        RadioButtonTahoma.Name = "RadioButtonTahoma"
-        RadioButtonTahoma.Size = New Size(67, 19)
-        RadioButtonTahoma.TabIndex = 0
-        RadioButtonTahoma.TabStop = True
-        RadioButtonTahoma.Text = "Tahoma"
-        RadioButtonTahoma.UseVisualStyleBackColor = True
+        RadioButton3.AutoSize = True
+        RadioButton3.Location = New Point(6, 13)
+        RadioButton3.Name = "RadioButton3"
+        RadioButton3.Size = New Size(67, 19)
+        RadioButton3.TabIndex = 0
+        RadioButton3.TabStop = True
+        RadioButton3.Text = "Tahoma"
+        RadioButton3.UseVisualStyleBackColor = True
         ' 
         ' GroupBox6
         ' 
-        GroupBox6.Controls.Add(RadioButtonMagneto)
+        GroupBox6.Controls.Add(RadioButton2)
         GroupBox6.Location = New Point(142, 22)
         GroupBox6.Name = "GroupBox6"
         GroupBox6.Size = New Size(133, 38)
         GroupBox6.TabIndex = 1
         GroupBox6.TabStop = False
         ' 
-        ' RadioButtonMagneto
+        ' RadioButton2
         ' 
-        RadioButtonMagneto.AutoSize = True
-        RadioButtonMagneto.Location = New Point(6, 13)
-        RadioButtonMagneto.Name = "RadioButtonMagneto"
-        RadioButtonMagneto.Size = New Size(73, 19)
-        RadioButtonMagneto.TabIndex = 0
-        RadioButtonMagneto.TabStop = True
-        RadioButtonMagneto.Text = "Magneto"
-        RadioButtonMagneto.UseVisualStyleBackColor = True
+        RadioButton2.AutoSize = True
+        RadioButton2.Location = New Point(6, 13)
+        RadioButton2.Name = "RadioButton2"
+        RadioButton2.Size = New Size(81, 19)
+        RadioButton2.TabIndex = 0
+        RadioButton2.TabStop = True
+        RadioButton2.Text = "Garamond"
+        RadioButton2.UseVisualStyleBackColor = True
         ' 
         ' GroupBox5
         ' 
-        GroupBox5.Controls.Add(RadioButtonGaramond)
+        GroupBox5.Controls.Add(RadioButton1)
         GroupBox5.Location = New Point(6, 21)
         GroupBox5.Name = "GroupBox5"
         GroupBox5.Size = New Size(122, 39)
         GroupBox5.TabIndex = 0
         GroupBox5.TabStop = False
         ' 
-        ' RadioButtonGaramond
+        ' RadioButton1
         ' 
-        RadioButtonGaramond.AutoSize = True
-        RadioButtonGaramond.Location = New Point(11, 14)
-        RadioButtonGaramond.Name = "RadioButtonGaramond"
-        RadioButtonGaramond.Size = New Size(81, 19)
-        RadioButtonGaramond.TabIndex = 0
-        RadioButtonGaramond.TabStop = True
-        RadioButtonGaramond.Text = "Garamond"
-        RadioButtonGaramond.UseVisualStyleBackColor = True
+        RadioButton1.AutoSize = True
+        RadioButton1.Location = New Point(6, 14)
+        RadioButton1.Name = "RadioButton1"
+        RadioButton1.Size = New Size(73, 19)
+        RadioButton1.TabIndex = 0
+        RadioButton1.TabStop = True
+        RadioButton1.Text = "Magneto"
+        RadioButton1.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButtonBlue
+        ' 
+        RadioButtonBlue.AutoSize = True
+        RadioButtonBlue.ForeColor = Color.Blue
+        RadioButtonBlue.Location = New Point(13, 121)
+        RadioButtonBlue.Name = "RadioButtonBlue"
+        RadioButtonBlue.Size = New Size(48, 19)
+        RadioButtonBlue.TabIndex = 1
+        RadioButtonBlue.TabStop = True
+        RadioButtonBlue.Text = "Blue"
+        RadioButtonBlue.UseVisualStyleBackColor = True
         ' 
         ' GroupBox3
         ' 
@@ -239,18 +251,6 @@ Partial Class DemonstrationsForm
         RadioButtonRed.Text = "Red"
         RadioButtonRed.UseVisualStyleBackColor = False
         ' 
-        ' RadioButtonBlue
-        ' 
-        RadioButtonBlue.AutoSize = True
-        RadioButtonBlue.ForeColor = Color.Blue
-        RadioButtonBlue.Location = New Point(13, 121)
-        RadioButtonBlue.Name = "RadioButtonBlue"
-        RadioButtonBlue.Size = New Size(48, 19)
-        RadioButtonBlue.TabIndex = 1
-        RadioButtonBlue.TabStop = True
-        RadioButtonBlue.Text = "Blue"
-        RadioButtonBlue.UseVisualStyleBackColor = True
-        ' 
         ' RadioButtonGreen
         ' 
         RadioButtonGreen.AutoSize = True
@@ -267,7 +267,7 @@ Partial Class DemonstrationsForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(784, 450)
         Controls.Add(GroupBox4)
         Controls.Add(GroupBox3)
         Controls.Add(GroupBox2)
@@ -276,7 +276,7 @@ Partial Class DemonstrationsForm
         Controls.Add(LoadButton)
         Controls.Add(ExitButton)
         Name = "DemonstrationsForm"
-        Text = "DemonstrationsForm"
+        Text = "        Object Demonstrations"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
@@ -311,7 +311,7 @@ Partial Class DemonstrationsForm
     Friend WithEvents GroupBox7 As GroupBox
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents GroupBox5 As GroupBox
-    Friend WithEvents RadioButtonTahoma As RadioButton
-    Friend WithEvents RadioButtonMagneto As RadioButton
-    Friend WithEvents RadioButtonGaramond As RadioButton
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
 End Class

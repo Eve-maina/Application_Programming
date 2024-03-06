@@ -57,14 +57,28 @@
         ' Apply the updated font style to the TextBox
         TextBox1.Font = New Font(TextBox1.Font, fontStyle)
     End Sub
-    Private Sub RadioButtonFont_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonGaramond.CheckedChanged, RadioButtonMagneto.CheckedChanged, RadioButtonTahoma.CheckedChanged
-        ' Apply the updated font family to the text box directly inside the conditions
-        If RadioButtonGaramond.Checked Then
-            TextBox1.Font = New Font("Garamond", TextBox1.Font.Size, TextBox1.Font.Style)
-        ElseIf RadioButtonMagneto.Checked Then
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        If RadioButton1.Checked Then
             TextBox1.Font = New Font("Magneto", TextBox1.Font.Size, TextBox1.Font.Style)
-        ElseIf RadioButtonTahoma.Checked Then
+            RadioButton2.Checked = False
+            RadioButton3.Checked = False
+        End If
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        If RadioButton2.Checked Then
+            TextBox1.Font = New Font("Garamond", TextBox1.Font.Size, TextBox1.Font.Style)
+            RadioButton1.Checked = False
+            RadioButton3.Checked = False
+        End If
+    End Sub
+
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
+        If RadioButton3.Checked Then
             TextBox1.Font = New Font("Tahoma", TextBox1.Font.Size, TextBox1.Font.Style)
+            RadioButton1.Checked = False
+            RadioButton2.Checked = False
         End If
     End Sub
 End Class
